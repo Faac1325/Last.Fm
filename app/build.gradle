@@ -36,6 +36,8 @@ dependencies {
     implementation libs.constraintlayout
     //lottie
     implementation "com.airbnb.android:lottie:6.0.0"
+    //Slider
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core

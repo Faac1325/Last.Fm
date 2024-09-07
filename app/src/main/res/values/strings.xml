@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">LastFm</string>
+    <string name="topArtist">Top Artísta de Colombia.</string>
+    <string name="lastFm">Last.FM</string>
+    <string name="mensaje">Los artistas más escuchados en Colombia !!!</string>
 </resources>
