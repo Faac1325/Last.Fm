@@ -1,12 +1,8 @@
-package fabian.arevalo.lastfm;
+package fabian.arevalo.lastfm.Vista;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
@@ -14,6 +10,8 @@ import com.denzcoskun.imageslider.models.SlideModel;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import fabian.arevalo.lastfm.R;
 
 public class TopArtists extends AppCompatActivity {
 

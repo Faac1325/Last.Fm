@@ -1,4 +1,4 @@
-package fabian.arevalo.lastfm;
+package fabian.arevalo.lastfm.Vista;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+
+import fabian.arevalo.lastfm.R;
 
 public class SplashScreen extends AppCompatActivity {
 
