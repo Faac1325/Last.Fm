@@ -16,8 +16,11 @@
         android:theme="@style/Theme.LastFm"
         tools:targetApi="31">
         <activity
+            android:name=".Vista.VistaSongs"
+            android:exported="false" />
+        <activity
             android:name=".Vista.VistaTopArtists"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Vista.SplashScreen"
             android:exported="true">
