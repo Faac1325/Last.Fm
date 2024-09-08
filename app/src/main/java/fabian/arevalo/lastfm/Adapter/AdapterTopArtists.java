@@ -27,7 +27,6 @@ public class AdapterTopArtists extends RecyclerView.Adapter<AdapterTopArtists.Vi
         this.context = context;
     }
 
-    // Especificar el XML que se va inflar en el recyclerView
     @NonNull
     @Override
     public AdapterTopArtists.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -35,7 +34,7 @@ public class AdapterTopArtists extends RecyclerView.Adapter<AdapterTopArtists.Vi
                 .inflate(R.layout.item_top_artists,null,false);
         return new ViewHolder(view);
     }
-    //Tiene la funcion de colocar en los componentes de item_top_artists la imag de portada y los demas
+
     @Override
     public void onBindViewHolder(@NonNull AdapterTopArtists.ViewHolder holder, int position) {
         Artists artist = artistsList.get(position);
