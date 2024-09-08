@@ -1,4 +1,7 @@
 package fabian.arevalo.lastfm.Modelo;
 
-public class ModeloTopArtists {
+import fabian.arevalo.lastfm.Interface.Interfaces;
+
+public class ModeloTopArtists implements Interfaces.ModeloTopArtists {
+
 }

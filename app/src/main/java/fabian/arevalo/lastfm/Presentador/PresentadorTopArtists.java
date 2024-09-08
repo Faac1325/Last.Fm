@@ -1,4 +1,8 @@
 package fabian.arevalo.lastfm.Presentador;
 
-public class PresentadorTopArtists {
+import fabian.arevalo.lastfm.Interface.Interfaces;
+
+public class PresentadorTopArtists implements Interfaces.PresentadorTopArtists {
+    
+
 }
