@@ -3,6 +3,7 @@ package fabian.arevalo.lastfm.Interface;
 import java.util.List;
 
 import fabian.arevalo.lastfm.Modelo.Artists;
+import fabian.arevalo.lastfm.Serializables.Songs.Track;
 
 public interface Interfaces {
 
@@ -24,14 +25,22 @@ public interface Interfaces {
     }
 
     interface VistaSonsgs {
+        void requestDataSongs(String artista);
+        void successfulSongs(List<Track> trackList);
+        void showError(String message);
 
     }
 
     interface PresentadorSonsgs {
+        void requestDataSongs(String artista);
+        void successfulSongs(List<Track> trackList);
+        void showError(String message);
 
     }
 
     interface ModeloSonsgs {
+        void requestDataSongs(String artista);
+        void successfulSongs(List<Track> trackList);
 
     }
 

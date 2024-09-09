@@ -3,7 +3,6 @@
     <string name="topArtist">Top Artísta de Colombia.</string>
     <string name="lastFm">Last.FM</string>
     <string name="mensaje">Los artistas más escuchados en Colombia !!!</string>
-    <string name="Error">Los artistas más escuchados en Colombia !!!</string>
     <string name="Errorinformacion">Error al obtener información</string>
     <string name="ErrorServer">Error del servidor. Intenta nuevamente.</string>
     <string name="ErrorConexion">No tiene conexión a Internet</string>

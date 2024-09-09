@@ -1,6 +1,7 @@
 package fabian.arevalo.lastfm.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import java.util.List;
 
 import fabian.arevalo.lastfm.Modelo.Artists;
 import fabian.arevalo.lastfm.R;
+import fabian.arevalo.lastfm.Vista.VistaSongs;
 
 public class AdapterTopArtists extends RecyclerView.Adapter<AdapterTopArtists.ViewHolder> {
     private List<Artists> artistsList;
@@ -45,6 +47,16 @@ public class AdapterTopArtists extends RecyclerView.Adapter<AdapterTopArtists.Vi
         Glide.with(context).load(urlImg)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(holder.img);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(context, VistaSongs.class);
+                intent.putExtra("nombre",artist.getName());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

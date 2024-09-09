@@ -6,6 +6,7 @@ import android.net.NetworkInfo;
 import java.util.List;
 import fabian.arevalo.lastfm.Interface.Interfaces;
 import fabian.arevalo.lastfm.Network.ApiClient;
+import fabian.arevalo.lastfm.Network.NetworkUtil;
 import fabian.arevalo.lastfm.R;
 import fabian.arevalo.lastfm.Serializables.RequestHeaders;
 import retrofit2.Call;
@@ -25,7 +26,7 @@ public class ModeloTopArtists implements Interfaces.ModeloTopArtists {
     @Override
     public void requestDataTopArtist() {
 
-            if (!isNetworkAvailable()) {
+            if (!NetworkUtil.isNetworkAvailable(context)) {
                 presentadorTopArtists.showError(context.getString(R.string.ErrorConexion));
             } else {
                 Call<RequestHeaders> topArtistsCall = ApiClient.getServer().getTopArtists();
@@ -45,20 +46,14 @@ public class ModeloTopArtists implements Interfaces.ModeloTopArtists {
                     }
                     @Override
                     public void onFailure(Call<RequestHeaders> call, Throwable t) {
-                        presentadorTopArtists.showError(context.getString(R.string.Error));
+                        presentadorTopArtists.showError(context.getString(R.string.ErrorInesperado));
 
                     }
                 });
             }
     }
-
     @Override
     public void successfulTopArtist(List<Artists> artistsList) {
         presentadorTopArtists.successfulQuery(artistsList);
-    }
-    private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 }
